@@ -1,5 +1,5 @@
-let randomNumber = parseInt(Math.random() * 100 + 1);
 
+let randomNumber = parseInt(Math.random() * 100 + 1);
 
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
@@ -15,12 +15,12 @@ let numGuess = 1;
 
 let playGame = true;
 
-if(playGame) {
+if (playGame) {
   submit.addEventListener('click', function (e) {
-   e.preventDefault();
-   const guess = parseInt(userInput.value);
-   console.log(guess);
-   validateGuess(guess);
+    e.preventDefault();
+    const guess = parseInt(userInput.value);
+    console.log(guess);
+    validateGuess(guess);
   });
 }
 
@@ -55,7 +55,7 @@ function checkGuess(guess) {
   }
 }
 
-function displayGuess() {
+function displayGuess(guess) {
   userInput.value = '';
   guessSlot.innerHTML += `${guess}, `;
   numGuess++;
@@ -90,5 +90,4 @@ function newGame() {
     playGame = true;
   });
 }
-
 
